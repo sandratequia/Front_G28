@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript" src="js/funcionesReportes.js"></script>  
+        <script src="https://cdn.tailwindcss.com"></script> 
+  
+    </head>
+
+    <body>
+        <div>
+
+            <!-- Section: Design Block -->
+            <section class="mb-1 overflow-hidden">
+              <nav class="navbar navbar-expand-lg shadow-md py-2 bg-white relative flex items-center w-full justify-between">
+                <div class="px-6 w-full flex flex-wrap items-center justify-between">
+                  <div class="flex items-center">
+                    
+                   
+                  </div>
+                  <div class="navbar-collapse collapse grow items-center" id="navbarSupportedContentY">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                        <a href="index.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Inicio</a>          
+                        <a href="categoria.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Categoría</a>
+                        <a href="room.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Habitación</a>          
+                        <a href="clientes.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Clientes</a>          
+                        <a href="mensajes.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Mensajes</a>
+                        <a href="reservaciones.html" class="text-black-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Reservaciones</a>
+                        <a href="reportes.html" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Reportes</a>
+  
+                    </div>
+                  </div>
+                  
+              </nav>
+              <script type="text/javascript">
+                window.onload = getCategoria();
+            </script>
+    
+              <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%; background-image: url('https://d3caycb064h6u1.cloudfront.net/wp-content/uploads/2021/09/datareports-scaled.jpg');
+              height: 400px;">
+                <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.75);">
+                  <div class="flex justify-center items-center h-full">
+                    <div class="text-center text-white px-6 md:px-12">
+                      <h1 class="text-5xl md:text-6xl xl:text-5xl font-bold tracking-tight mb-25">Reserva las mejores habitaciones <br>en cualquier lugar del mundo<br>al mejor precio. </h1><br><br>
+                      <a class="inline-block px-7 py-3 mr-1.5 border-2 border-white text-white font-medium text-sm leading-snug uppercase rounded-full shadow-md hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out" data-mdb-ripple="true" data-mdb-ripple-color="light" href="reservaciones.html" role="button">Reserva ya</a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+             
+            </section>
+
+            <section class="text-gray-400 bg-gray-900 body-font">
+                <div class="container px-5 py-24 mx-auto">
+                  <div class="flex flex-col text-center w-full mb-12">
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Generar reportes</h1>
+                  </div>                 
+                    <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg "onclick="getStatus()">Generar reporte Status</button><br>
+                    <div id="resultado1"></div><br>
+                    <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg "onclick="getFechas()">Generar reporte Fechas</button><br>
+                    <div id="resultado2"></div><br>
+                    <button class="text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg "onclick="getClientes()">Generar reporte Clientes</button>
+                    <div id="resultado3"></div>                    
+                </div>
+                </div>
+                
+              </section>
+    </body>
+
+</html>
